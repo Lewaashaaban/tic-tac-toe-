@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <title>Vanilla JS T3</title>
+    <script
+      src="https://kit.fontawesome.com/dadc1af241.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <main>
+      <div class="grid">
+        <div class="turn">
+          <i class="fa-solid fa-x"></i>
+          <p>place holder</p>
+        </div>
+        <div class="menu">
+          <button class="menu-btn">
+            Actions
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+
+          <div class="items border hidden">
+            <button>Reset</button>
+            <button>New Round</button>
+          </div>
+        </div>
+
+        <!-- game board -->
+        <div class="square shadow"></div>
+        <div class="square shadow"></div>
+        <div class="square shadow"></div>
+        <div class="square shadow"></div>
+        <div class="square shadow"></div>
+        <div class="square shadow"></div>
+        <div class="square shadow"></div>
+        <div class="square shadow"></div>
+        <div class="square shadow"></div>
+
+        <!-- Scoreboard -->
+        <div class="score shadow">
+          <p>player one</p>
+          <span>0 Wins</span>
+        </div>
+        <div class="score shadow" style="background-color: white">
+          <p>ties</p>
+          <span>0</span>
+        </div>
+        <div class="score shadow" style="background-color: var(--yellow)">
+          <p>Player 2</p>
+          <span>0 Wins</span>
+        </div>
+      </div>
+    </main>
+    <footer><p>Original Project by <span>@lewaa</span></p></footer>
+  </body>
+</html>
