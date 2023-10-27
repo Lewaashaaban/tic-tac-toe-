@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="css/index.css" />
     <title>Vanilla JS T3</title>
     <script
       src="https://kit.fontawesome.com/dadc1af241.js"
@@ -17,28 +17,30 @@
           <i class="fa-solid fa-x"></i>
           <p>place holder</p>
         </div>
-        <div class="menu">
+
+        <!-- dropdown menu -->
+        <div class="menu" data-id="menu">
           <button class="menu-btn">
             Actions
             <i class="fa-solid fa-chevron-down"></i>
           </button>
 
-          <div class="items border hidden">
-            <button>Reset</button>
-            <button>New Round</button>
+          <div class="items border hidden" data-id="menu-items">
+            <button data-id="reset-btn">Reset</button>
+            <button data-id="new-round-btn">New Round</button>
           </div>
         </div>
 
         <!-- gameboard -->
-        <div class="square shadow"></div>
-        <div class="square shadow"></div>
-        <div class="square shadow"></div>
-        <div class="square shadow"></div>
-        <div class="square shadow"></div>
-        <div class="square shadow"></div>
-        <div class="square shadow"></div>
-        <div class="square shadow"></div>
-        <div class="square shadow"></div>
+        <div class="square shadow" data-id="square" id="1"></div>
+        <div class="square shadow" data-id="square" id="2"></div>
+        <div class="square shadow" data-id="square" id="3"></div>
+        <div class="square shadow" data-id="square" id="4"></div>
+        <div class="square shadow" data-id="square" id="5"></div>
+        <div class="square shadow" data-id="square" id="6"></div>
+        <div class="square shadow" data-id="square" id="7"></div>
+        <div class="square shadow" data-id="square" id="8"></div>
+        <div class="square shadow" data-id="square" id="9"></div>
 
         <!-- Scoreboard -->
         <div class="score shadow">
@@ -51,18 +53,22 @@
         </div>
         <div class="score shadow" style="background-color: var(--yellow)">
           <p>Player 2</p>
-          <span>0 Winss</span>
+          <span>0 Wins</span>
         </div>
       </div>
     </main>
     <footer>
       <p>Original Project by <span>@lewaa</span></p>
     </footer>
+
+    <!-- Modal that opens when game ends -->
     <div class="modal hidden">
       <div class="modal-contents">
         <p>player 1 wins!</p>
         <button>Play again</button>
       </div>
     </div>
+
+    <script src="js/index.js"></script>
   </body>
 </html>
