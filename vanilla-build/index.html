@@ -13,9 +13,9 @@
   <body>
     <main>
       <div class="grid">
-        <div class="turn">
-          <i class="fa-solid fa-x"></i>
-          <p>place holder</p>
+        <div class="turn" data-id="turn">
+          <i class="fa-solid fa-x" data-id="turn-icon"></i>
+          <p data-id="turn-p">Player 1</p>
         </div>
 
         <!-- dropdown menu -->
@@ -32,12 +32,8 @@
         </div>
 
         <!-- gameboard -->
-        <div class="square shadow" data-id="square" id="1">
-          <i class="fa-solid fa-x yellow"></i>
-        </div>
-        <div class="square shadow" data-id="square" id="2">
-          <i class="fa-solid fa-o turquoise"></i>
-        </div>
+        <div class="square shadow" data-id="square" id="1"></div>
+        <div class="square shadow" data-id="square" id="2"></div>
         <div class="square shadow" data-id="square" id="3"></div>
         <div class="square shadow" data-id="square" id="4"></div>
         <div class="square shadow" data-id="square" id="5"></div>
@@ -57,19 +53,19 @@
         </div>
         <div class="score shadow" style="background-color: var(--yellow)">
           <p>Player 2</p>
-          <span>0 Winss</span>
+          <span>0 Wins</span>
         </div>
       </div>
     </main>
     <footer>
-      <p>Original Project by <span>@lewaa</span></p>
+      <p>Original Project by <span>@l.e.w.a.a</span></p>
     </footer>
 
     <!-- Modal that opens when game ends -->
-    <div class="modal hidden">
+    <div class="modal hidden" data-id="modal">
       <div class="modal-contents">
-        <p>player 1 wins!</p>
-        <button>Play again</button>
+        <p data-id="modal-text">player 1 wins!</p>
+        <button data-id="modal-button">Play again</button>
       </div>
     </div>
 
