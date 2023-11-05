@@ -1,7 +1,7 @@
 import Store from "./store.js";
 import View from "./view.js";
 
-// Our players "config" - defines icons, colors, name, etc.
+
 const players = [
   {
     id: 1,
@@ -25,27 +25,17 @@ function init() {
   // "View"
   const view = new View();
 
-  // "Controller" logic (event listeners + handlers)
-
-  /**
-   * Listen for changes to the game state, re-render view when change occurs.
-   *
-   * The `statechange` event is a custom Event defined in the Store class
-   */
   store.addEventListener("statechange", () => {
     view.render(store.game, store.stats);
   });
 
-  /**
-   * When 2 players are playing from different browser tabs, listen for changes
-   * @see https://developer.mozilla.org/en-US/docs/Web/API/Window/storage_event
-   */
+ 
   window.addEventListener("storage", () => {
     console.log("State changed from another tab");
     view.render(store.game, store.stats);
   });
 
-  // When the HTML document first loads, render the view based on the current state.
+  
   view.render(store.game, store.stats);
 
   view.bindGameResetEvent((event) => {
