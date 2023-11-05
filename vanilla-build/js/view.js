@@ -6,8 +6,6 @@ export default class View {
   $$ = {};
 
   constructor() {
-   
-
     // Single elements
     this.$.menu = this.qs('[data-id="menu"]');
     this.$.menuBtn = this.qs('[data-id="menu-btn"]');
@@ -37,7 +35,6 @@ export default class View {
     });
   }
 
-  
   render(game, stats) {
     const { playerWithStats, ties } = stats;
     const {
@@ -63,8 +60,6 @@ export default class View {
     this.setTurnIndicator(currentPlayer);
   }
 
-  
-
   bindGameResetEvent(handler) {
     this.$.resetBtn.addEventListener("click", handler);
     this.$.modalBtn.addEventListener("click", handler);
@@ -77,8 +72,6 @@ export default class View {
   bindPlayerMoveEvent(handler) {
     this.delegate(this.$.grid, '[data-id="square"]', "click", handler);
   }
-
- 
 
   updateScoreboard(p1Wins, p2Wins, ties) {
     this.$.p1Wins.innerText = `${p1Wins} wins`;
@@ -172,15 +165,6 @@ export default class View {
     return elList;
   }
 
-  /**
-   * Rather than registering event listeners on every child element in our Tic Tac Toe grid, we can
-   * listen to the grid container and derive which square was clicked using the matches() function.
-   *
-   * @param {*} el the "container" element you want to listen for events on
-   * @param {*} selector the "child" elements within the "container" you want to handle events for
-   * @param {*} eventKey the event type you are listening for (e.g. "click" event)
-   * @param {*} handler the callback function that is executed when the specified event is triggered on the specified children
-   */
   delegate(el, selector, eventKey, handler) {
     el.addEventListener(eventKey, (event) => {
       if (event.target.matches(selector)) {

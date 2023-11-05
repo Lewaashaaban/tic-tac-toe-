@@ -1,7 +1,7 @@
 :root {
   --dark-gray: #1a2a32;
   --gray: #2e4756;
-  --turquoie: #3cc4bf;
+  --turquoise: #3cc4bf;
   --yellow: #f2b147;
   --light-gray: #d3d3d3;
 }
@@ -188,7 +188,7 @@ button:hover {
 }
 
 .turquoise {
-  color: var(--turquoie);
+  color: var(--turquoise);
 }
 
 .shadow {
