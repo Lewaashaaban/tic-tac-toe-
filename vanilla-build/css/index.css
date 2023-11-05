@@ -92,7 +92,7 @@ body {
 }
 
 .score {
-  background-color: var(--turquoie);
+  background-color: var(--turquoise);
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -231,6 +231,6 @@ button:hover {
 .modal-contents button {
   padding: 10px;
   border-radius: 10px;
-  background-color: var(--turquoie);
+  background-color: var(--turquoise);
   color: var(--gray);
 }
